@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - ALFA X</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container-cadastro">
+
+    <!-- Logo -->
+    <div class="logo">
+      <h1 class="logo-title">ALFA <span>X</span></h1>
+      <p class="logo-subtitle">Roupas masculinas</p>
+    </div>
+
+    <p>Preencha seus dados abaixo para receber seu desconto na compra total.</p>
+
+    <!-- FORMULÁRIO -->
+    <form id="cadastroForm">
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" placeholder="Digite uma senha" required>
+      
+      <a href="index2.html" class="btn-link">Continuar</a>
+    </form>
+
+    <!-- POPUP DE SUCESSO -->
+    <div id="popup-sucesso" class="popup hidden">
+      <p>Usuário cadastrado com sucesso! 🎉<br>5% de desconto garantido!</p>
+    </div>
+
+  </div>
+
+  <script src="scrip2.js"></script>
+</body>
+</html>

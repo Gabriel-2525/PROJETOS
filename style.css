@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f9f871, #ffd6d6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-cadastro {
+  background-color: #fff;
+  padding: 50px 30px 30px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+/* LOGO */
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #000;
+  margin: 0;
+}
+
+.logo-title span {
+  color: #ff4081; /* Neon rosa destaque no X */
+}
+
+.logo-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* TÍTULOS E PARÁGRAFOS */
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ff4081;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* FORMULÁRIO */
+form label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.btn-cadastro {
+  width: 100%;
+  padding: 15px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-link {
+  display: inline-block;
+  margin-top: 25px;
+  background-color: #000;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.25s;
+}
+
+.btn-cadastro:hover {
+  background-color: #222;
+}
+
+/* POPUP DE SUCESSO */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #000;
+  color: #fff;
+  padding: 25px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #ff4081, 0 4px 15px rgba(0,0,0,0.3);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 999;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.hidden {
+  display: none;
+}

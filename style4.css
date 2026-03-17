@@ -1,0 +1,74 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container-finalizada {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logo-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2em;
+  color: #000;
+}
+
+.logo-title span {
+  color: #ff3b3b;
+}
+
+.logo-subtitle {
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+
+.mensagem-final h2 {
+  color: #2ecc71;
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.mensagem-final p {
+  color: #333;
+  line-height: 1.5em;
+}
+
+.botoes-final {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-link:hover {
+  background-color: #ff3b3b;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.8em;
+  color: #999;
+}

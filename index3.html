@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação - ALFA X</title>
+  <link rel="stylesheet" href="style3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container-avaliacao">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <h1 class="logo-title">ALFA <span>X</span></h1>
+      <p class="logo-subtitle">Sua opinião é importante pra nós!</p>
+    </div>
+
+    <!-- AVALIAÇÃO -->
+    <div id="avaliacao">
+      <!-- Adicione dentro de <div id="avaliacao">, antes do botão enviar -->
+<form action="resultado.php" method="post" id="formAvaliacao">
+  <input type="hidden" name="nota" id="inputNota" value="">
+</form>
+
+<!-- Alterar botão para enviar o formulário -->
+<button type="button" class="avaliar-btn" id="btnEnviarAvaliacao">Enviar Avaliação</button>
+
+      <h2>Avalie nossa loja</h2>
+      <p>Deixe sua nota de 1 a 10 ⭐</p>
+
+      <!-- 10 ESTRELAS -->
+      <div id="estrelas" class="estrelas">
+        <span class="estrela" data-nota="1">★</span>
+        <span class="estrela" data-nota="2">★</span>
+        <span class="estrela" data-nota="3">★</span>
+        <span class="estrela" data-nota="4">★</span>
+        <span class="estrela" data-nota="5">★</span>
+        <span class="estrela" data-nota="6">★</span>
+        <span class="estrela" data-nota="7">★</span>
+        <span class="estrela" data-nota="8">★</span>
+        <span class="estrela" data-nota="9">★</span>
+        <span class="estrela" data-nota="10">★</span>
+      </div>
+
+      <p id="notaEscolhida"></p>
+
+      <!-- BOTÕES / LINKS -->
+      <div class="links-avaliacao">
+        <button class="avaliar-btn" id="btnEnviarAvaliacao">Enviar Avaliação</button>
+        <a href="index.html" class="btn-link">Voltar para Loja</a>
+        <a href="index2.html" class="btn-link">Ver Produtos</a>
+      </div>
+
+      <p id="mensagemAgradecimento" class="hidden">💬 Obrigado pela sua avaliação!</p>
+    </div>
+
+  </div>
+
+  <script>
+    const estrelas = document.querySelectorAll('.estrela');
+    const notaEscolhida = document.getElementById('notaEscolhida');
+    const btnEnviar = document.getElementById('btnEnviarAvaliacao');
+    const mensagem = document.getElementById('mensagemAgradecimento');
+    let nota = 0;
+
+    // Selecionar estrelas
+    estrelas.forEach((estrela, index) => {
+      estrela.addEventListener('click', () => {
+        nota = index + 1;
+        estrelas.forEach((e, i) => {
+          e.style.color = i < nota ? '#FFD700' : '#ccc';
+        });
+        notaEscolhida.textContent = `Você avaliou com ${nota} de 10 estrelas.`;
+        notaEscolhida.style.color = "#000";
+      });
+    });
+
+    // Enviar avaliação
+    btnEnviar.addEventListener('click', () => {
+      if (nota > 0) {
+        mensagem.classList.remove('hidden');
+        btnEnviar.disabled = true;
+        btnEnviar.textContent = "Enviado ✅";
+      } else {
+        notaEscolhida.textContent = "Por favor, selecione uma nota antes de enviar.";
+        notaEscolhida.style.color = "red";
+      }
+    });
+
+  src="script.js"
+
+  </script>
+
+</body>
+</html>

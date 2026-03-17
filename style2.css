@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  color: #0F1724;
+}
+
+/* ===== HEADER E LOGO ===== */
+.header {
+  background-color: #000; /* fundo preto */
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 3px;
+  color: #fff;
+  margin: 0;
+}
+
+.logo-title span {
+  color: #00ADB5; /* destaque no X (pode trocar pra vermelho, branco, etc) */
+}
+
+.logo-subtitle {
+  font-size: 14px;
+  color: #ccc;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+/* ===== CONTEÚDO ===== */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #111;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+.btn-link {
+  display: inline-block;
+  margin-top: 25px;
+  background-color: #000;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.25s;
+}
+
+.btn-link:hover {
+  background-color: #222;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+  .logo-title {
+    font-size: 30px;
+  }
+  .container {
+    margin: 20px;
+  }
+}
